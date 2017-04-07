@@ -1,18 +1,18 @@
 <svg height="238" width="720" xmlns="http://www.w3.org/2000/svg">
 <rect height="238" fill="#555" width="720"></rect>
 <text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
-<tspan x="10" y="26">  0.  2017-04-07 01:43:37 +0000   308192 byte  .</tspan>
-<tspan x="10" y="42">  1.  2017-04-07 01:43:37 +0000     1328 byte  README.md</tspan>
-<tspan x="10" y="58">  2.  2017-04-07 01:43:37 +0000     2430 byte  index.js</tspan>
-<tspan x="10" y="74">  3.  2017-04-07 01:43:37 +0000     2729 byte  package.json</tspan>
-<tspan x="10" y="90">  4.  2017-04-07 01:43:37 +0000      833 byte  test/check_for_updates.js</tspan>
-<tspan x="10" y="106">  5.  2017-04-07 01:43:37 +0000   272758 byte  test/fixtures/sample_picture_1.png</tspan>
-<tspan x="10" y="122">  6.  2017-04-07 01:43:37 +0000    21414 byte  test/fixtures/sample_picture_2.png</tspan>
-<tspan x="10" y="138">  7.  2017-04-07 01:43:37 +0000      170 byte  test/fixtures/test_1.html</tspan>
-<tspan x="10" y="154">  8.  2017-04-07 01:43:37 +0000      340 byte  test/fixtures/test_1_expected_output.html</tspan>
-<tspan x="10" y="170">  9.  2017-04-07 01:43:37 +0000      240 byte  test/fixtures/test_2.html</tspan>
-<tspan x="10" y="186"> 10.  2017-04-07 01:43:37 +0000      340 byte  test/fixtures/test_2_expected_output.html</tspan>
-<tspan x="10" y="202"> 11.  2017-04-07 01:43:37 +0000     3060 byte  test/generate_favicon.js</tspan>
-<tspan x="10" y="218"> 12.  2017-04-07 01:43:37 +0000     2550 byte  test/inject_favicon_markups.js</tspan>
+<tspan x="10" y="26">  0.  2017-04-07 01:45:18 +0000   308192 byte  .</tspan>
+<tspan x="10" y="42">  1.  2017-04-07 01:45:18 +0000     1328 byte  README.md</tspan>
+<tspan x="10" y="58">  2.  2017-04-07 01:45:18 +0000     2430 byte  index.js</tspan>
+<tspan x="10" y="74">  3.  2017-04-07 01:45:18 +0000     2729 byte  package.json</tspan>
+<tspan x="10" y="90">  4.  2017-04-07 01:45:18 +0000      833 byte  test/check_for_updates.js</tspan>
+<tspan x="10" y="106">  5.  2017-04-07 01:45:18 +0000   272758 byte  test/fixtures/sample_picture_1.png</tspan>
+<tspan x="10" y="122">  6.  2017-04-07 01:45:18 +0000    21414 byte  test/fixtures/sample_picture_2.png</tspan>
+<tspan x="10" y="138">  7.  2017-04-07 01:45:18 +0000      170 byte  test/fixtures/test_1.html</tspan>
+<tspan x="10" y="154">  8.  2017-04-07 01:45:18 +0000      340 byte  test/fixtures/test_1_expected_output.html</tspan>
+<tspan x="10" y="170">  9.  2017-04-07 01:45:18 +0000      240 byte  test/fixtures/test_2.html</tspan>
+<tspan x="10" y="186"> 10.  2017-04-07 01:45:18 +0000      340 byte  test/fixtures/test_2_expected_output.html</tspan>
+<tspan x="10" y="202"> 11.  2017-04-07 01:45:18 +0000     3060 byte  test/generate_favicon.js</tspan>
+<tspan x="10" y="218"> 12.  2017-04-07 01:45:18 +0000     2550 byte  test/inject_favicon_markups.js</tspan>
 </text>
 </svg>
