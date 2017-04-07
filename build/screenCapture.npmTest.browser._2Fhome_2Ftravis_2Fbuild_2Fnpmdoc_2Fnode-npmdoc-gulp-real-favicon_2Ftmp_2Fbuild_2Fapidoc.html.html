@@ -1,0 +1,256 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/RealFaviconGenerator/gulp-real-favicon#readme">gulp-real-favicon (v0.2.2)</a>
+</h1>
+<h4>Generate a multiplatform favicon with RealFaviconGenerator</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp-real-favicon">module gulp-real-favicon</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-real-favicon.checkForUpdates">
+            function <span class="apidocSignatureSpan">gulp-real-favicon.</span>checkForUpdates
+            <span class="apidocSignatureSpan">(currentVersion, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-real-favicon.escapeJSONSpecialChars">
+            function <span class="apidocSignatureSpan">gulp-real-favicon.</span>escapeJSONSpecialChars
+            <span class="apidocSignatureSpan">(json)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-real-favicon.generateFavicon">
+            function <span class="apidocSignatureSpan">gulp-real-favicon.</span>generateFavicon
+            <span class="apidocSignatureSpan">(params, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-real-favicon.injectFaviconMarkups">
+            function <span class="apidocSignatureSpan">gulp-real-favicon.</span>injectFaviconMarkups
+            <span class="apidocSignatureSpan">(htmlMarkups, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp-real-favicon" id="apidoc.module.gulp-real-favicon">module gulp-real-favicon</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-real-favicon.checkForUpdates" id="apidoc.element.gulp-real-favicon.checkForUpdates">
+        function <span class="apidocSignatureSpan">gulp-real-favicon.</span>checkForUpdates
+        <span class="apidocSignatureSpan">(currentVersion, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">checkForUpdates = function (currentVersion, callback) {
+  rfg.changeLog(currentVersion, function(err, versions) {
+    if ((err !== undefined) &amp;&amp; (callback !== undefined)) {
+      callback(err, versions);
+      return;
+    }
+
+    if (versions.length &gt; 0) {
+      var url = 'https://realfavicongenerator.net/change_log?since=' + currentVersion;
+      // Yep, override err so callback receives it as an error
+      err = "A new version is available for your favicon. Visit " + url + " for more information.";
+
+      gutil.log(gutil.colors.red(err));
+    }
+    else {
+      gutil.log(gutil.colors.green("Your favicon is up-to-date. Hurray!"));
+    }
+
+    if (callback !== undefined) {
+      callback(err, versions);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-real-favicon.escapeJSONSpecialChars" id="apidoc.element.gulp-real-favicon.escapeJSONSpecialChars">
+        function <span class="apidocSignatureSpan">gulp-real-favicon.</span>escapeJSONSpecialChars
+        <span class="apidocSignatureSpan">(json)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">escapeJSONSpecialChars = function (json) {
+  return rfg.escapeJSONSpecialChars(json);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-real-favicon.generateFavicon" id="apidoc.element.gulp-real-favicon.generateFavicon">
+        function <span class="apidocSignatureSpan">gulp-real-favicon.</span>generateFavicon
+        <span class="apidocSignatureSpan">(params, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generateFavicon = function (params, callback) {
+  var request = rfg.createRequest({
+    apiKey: API_KEY,
+    masterPicture: params.masterPicture,
+    iconsPath: params.iconsPath,
+    design: params.design,
+    settings: params.settings,
+    versioning: params.versioning
+  });
+
+  rfg.generateFavicon(request, params.dest, function(err, data) {
+    if (err) {
+      throw new gutil.PluginError({
+        plugin: PLUGIN_NAME,
+        message: err
+      });
+    }
+
+    fs.writeFileSync(params.markupFile, JSON.stringify(data));
+
+    if (callback !== undefined) {
+      callback(err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  masterPicture: params.masterPicture,
+  iconsPath: params.iconsPath,
+  design: params.design,
+  settings: params.settings,
+  versioning: params.versioning
+});
+
+rfg.<span class="apidocCodeKeywordSpan">generateFavicon</span>(request, params.dest, function(err, data) {
+  if (err) {
+    throw new gutil.PluginError({
+      plugin: PLUGIN_NAME,
+      message: err
+    });
+  }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-real-favicon.injectFaviconMarkups" id="apidoc.element.gulp-real-favicon.injectFaviconMarkups">
+        function <span class="apidocSignatureSpan">gulp-real-favicon.</span>injectFaviconMarkups
+        <span class="apidocSignatureSpan">(htmlMarkups, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">injectFaviconMarkups = function (htmlMarkups, options) {
+  var stream = through.obj(function(file, enc, cb) {
+    if (file.isBuffer()) {
+      rfg.injectFaviconMarkups(file.contents, htmlMarkups,
+        (typeof options !== undefined) ? options : {}, function(err, html) {
+        file.contents = new Buffer(html);
+        stream.push(file);
+        cb();
+      });
+    }
+
+    if (file.isStream()) {
+      this.emit('error', new gutil.PluginError(PLUGIN_NAME, 'Stream not supported'));
+    }
+  });
+
+  // returning the file stream
+  return stream;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+  });
+},
+
+injectFaviconMarkups: function(htmlMarkups, options) {
+  var stream = through.obj(function(file, enc, cb) {
+    if (file.isBuffer()) {
+      rfg.<span class="apidocCodeKeywordSpan">injectFaviconMarkups</span>(file.contents, htmlMarkups,
+        (typeof options !== undefined) ? options : {}, function(err, html) {
+        file.contents = new Buffer(html);
+        stream.push(file);
+        cb();
+      });
+    }
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
