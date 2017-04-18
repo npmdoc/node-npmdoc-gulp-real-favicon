@@ -1,9 +1,14 @@
-# api documentation for  [gulp-real-favicon (v0.2.2)](https://github.com/RealFaviconGenerator/gulp-real-favicon#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-real-favicon.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-real-favicon) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-real-favicon.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-real-favicon)
+# npmdoc-gulp-real-favicon
+
+#### api documentation for  [gulp-real-favicon (v0.2.2)](https://github.com/RealFaviconGenerator/gulp-real-favicon#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-real-favicon.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-real-favicon) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-real-favicon.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-real-favicon)
+
 #### Generate a multiplatform favicon with RealFaviconGenerator
 
-[![NPM](https://nodei.co/npm/gulp-real-favicon.png?downloads=true)](https://www.npmjs.com/package/gulp-real-favicon)
+[![NPM](https://nodei.co/npm/gulp-real-favicon.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/gulp-real-favicon)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-real-favicon/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-gulp-real-favicon_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-real-favicon/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-gulp-real-favicon/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-gulp-real-favicon/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-real-favicon/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-real-favicon/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-gulp-real-favicon/build/screenCapture.npmPackageListing.svg)
 
@@ -18,7 +23,6 @@
 {
     "author": {
         "name": "Philippe Bernard",
-        "email": "philippe@realfavicongenerator.net",
         "url": "https://realfavicongenerator.net/"
     },
     "bugs": {
@@ -52,13 +56,11 @@
     "main": "index.js",
     "maintainers": [
         {
-            "name": "pbernard_rfg",
-            "email": "philippe@realfavicongenerator.net"
+            "name": "pbernard_rfg"
         }
     ],
     "name": "gulp-real-favicon",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/RealFaviconGenerator/gulp-real-favicon.git"
@@ -68,156 +70,6 @@
     },
     "version": "0.2.2"
 }
-```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module gulp-real-favicon](#apidoc.module.gulp-real-favicon)
-1.  [function <span class="apidocSignatureSpan">gulp-real-favicon.</span>checkForUpdates (currentVersion, callback)](#apidoc.element.gulp-real-favicon.checkForUpdates)
-1.  [function <span class="apidocSignatureSpan">gulp-real-favicon.</span>escapeJSONSpecialChars (json)](#apidoc.element.gulp-real-favicon.escapeJSONSpecialChars)
-1.  [function <span class="apidocSignatureSpan">gulp-real-favicon.</span>generateFavicon (params, callback)](#apidoc.element.gulp-real-favicon.generateFavicon)
-1.  [function <span class="apidocSignatureSpan">gulp-real-favicon.</span>injectFaviconMarkups (htmlMarkups, options)](#apidoc.element.gulp-real-favicon.injectFaviconMarkups)
-
-
-
-# <a name="apidoc.module.gulp-real-favicon"></a>[module gulp-real-favicon](#apidoc.module.gulp-real-favicon)
-
-#### <a name="apidoc.element.gulp-real-favicon.checkForUpdates"></a>[function <span class="apidocSignatureSpan">gulp-real-favicon.</span>checkForUpdates (currentVersion, callback)](#apidoc.element.gulp-real-favicon.checkForUpdates)
-- description and source-code
-```javascript
-checkForUpdates = function (currentVersion, callback) {
-  rfg.changeLog(currentVersion, function(err, versions) {
-    if ((err !== undefined) && (callback !== undefined)) {
-      callback(err, versions);
-      return;
-    }
-
-    if (versions.length > 0) {
-      var url = 'https://realfavicongenerator.net/change_log?since=' + currentVersion;
-      // Yep, override err so callback receives it as an error
-      err = "A new version is available for your favicon. Visit " + url + " for more information.";
-
-      gutil.log(gutil.colors.red(err));
-    }
-    else {
-      gutil.log(gutil.colors.green("Your favicon is up-to-date. Hurray!"));
-    }
-
-    if (callback !== undefined) {
-      callback(err, versions);
-    }
-  });
-}
-```
-- example usage
-```shell
-n/a
-```
-
-#### <a name="apidoc.element.gulp-real-favicon.escapeJSONSpecialChars"></a>[function <span class="apidocSignatureSpan">gulp-real-favicon.</span>escapeJSONSpecialChars (json)](#apidoc.element.gulp-real-favicon.escapeJSONSpecialChars)
-- description and source-code
-```javascript
-escapeJSONSpecialChars = function (json) {
-  return rfg.escapeJSONSpecialChars(json);
-}
-```
-- example usage
-```shell
-n/a
-```
-
-#### <a name="apidoc.element.gulp-real-favicon.generateFavicon"></a>[function <span class="apidocSignatureSpan">gulp-real-favicon.</span>generateFavicon (params, callback)](#apidoc.element.gulp-real-favicon.generateFavicon)
-- description and source-code
-```javascript
-generateFavicon = function (params, callback) {
-  var request = rfg.createRequest({
-    apiKey: API_KEY,
-    masterPicture: params.masterPicture,
-    iconsPath: params.iconsPath,
-    design: params.design,
-    settings: params.settings,
-    versioning: params.versioning
-  });
-
-  rfg.generateFavicon(request, params.dest, function(err, data) {
-    if (err) {
-      throw new gutil.PluginError({
-        plugin: PLUGIN_NAME,
-        message: err
-      });
-    }
-
-    fs.writeFileSync(params.markupFile, JSON.stringify(data));
-
-    if (callback !== undefined) {
-      callback(err);
-    }
-  });
-}
-```
-- example usage
-```shell
-...
-  masterPicture: params.masterPicture,
-  iconsPath: params.iconsPath,
-  design: params.design,
-  settings: params.settings,
-  versioning: params.versioning
-});
-
-rfg.generateFavicon(request, params.dest, function(err, data) {
-  if (err) {
-    throw new gutil.PluginError({
-      plugin: PLUGIN_NAME,
-      message: err
-    });
-  }
-...
-```
-
-#### <a name="apidoc.element.gulp-real-favicon.injectFaviconMarkups"></a>[function <span class="apidocSignatureSpan">gulp-real-favicon.</span>injectFaviconMarkups (htmlMarkups, options)](#apidoc.element.gulp-real-favicon.injectFaviconMarkups)
-- description and source-code
-```javascript
-injectFaviconMarkups = function (htmlMarkups, options) {
-  var stream = through.obj(function(file, enc, cb) {
-    if (file.isBuffer()) {
-      rfg.injectFaviconMarkups(file.contents, htmlMarkups,
-        (typeof options !== undefined) ? options : {}, function(err, html) {
-        file.contents = new Buffer(html);
-        stream.push(file);
-        cb();
-      });
-    }
-
-    if (file.isStream()) {
-      this.emit('error', new gutil.PluginError(PLUGIN_NAME, 'Stream not supported'));
-    }
-  });
-
-  // returning the file stream
-  return stream;
-}
-```
-- example usage
-```shell
-...
-    }
-  });
-},
-
-injectFaviconMarkups: function(htmlMarkups, options) {
-  var stream = through.obj(function(file, enc, cb) {
-    if (file.isBuffer()) {
-      rfg.injectFaviconMarkups(file.contents, htmlMarkups,
-        (typeof options !== undefined) ? options : {}, function(err, html) {
-        file.contents = new Buffer(html);
-        stream.push(file);
-        cb();
-      });
-    }
-...
 ```
 
 
