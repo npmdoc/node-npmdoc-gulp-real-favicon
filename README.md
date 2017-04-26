@@ -1,6 +1,6 @@
 # npmdoc-gulp-real-favicon
 
-#### api documentation for  [gulp-real-favicon (v0.2.2)](https://github.com/RealFaviconGenerator/gulp-real-favicon#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-real-favicon.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-real-favicon) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-real-favicon.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-real-favicon)
+#### basic api documentation for  [gulp-real-favicon (v0.2.2)](https://github.com/RealFaviconGenerator/gulp-real-favicon#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-real-favicon.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-real-favicon) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-real-favicon.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-real-favicon)
 
 #### Generate a multiplatform favicon with RealFaviconGenerator
 
@@ -68,7 +68,8 @@
     "scripts": {
         "test": "mocha"
     },
-    "version": "0.2.2"
+    "version": "0.2.2",
+    "bin": {}
 }
 ```
 
