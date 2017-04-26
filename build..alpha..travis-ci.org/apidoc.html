@@ -135,7 +135,23 @@
     }
   });
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var gulp = require(&#x27;gulp&#x27;);
+var realFavicon = require(&#x27;../&#x27;);
+var assert = require(&#x27;assert&#x27;);
+var gutil = require(&#x27;gulp-util&#x27;);
+
+describe(&#x27;checkForUpdates&#x27;, function() {
+it(&#x27;should return an error when a new version is available&#x27;, function(done) {
+  realFavicon.<span class="apidocCodeKeywordSpan">checkForUpdates</span>(0.9, function(err) {
+    assert.notEqual(err, undefined);
+    done();
+  });
+});
+
+it(&#x27;should return no error when no new version is available&#x27;, function(done) {
+  // The hardcoded version should match the current version returned
+...</pre></li>
     </ul>
 
 

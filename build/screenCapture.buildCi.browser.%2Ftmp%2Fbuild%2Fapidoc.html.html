@@ -128,7 +128,23 @@
     }
   });
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var gulp = require('gulp');
+var realFavicon = require('../');
+var assert = require('assert');
+var gutil = require('gulp-util');
+
+describe('checkForUpdates', function() {
+it('should return an error when a new version is available', function(done) {
+  realFavicon.<span class="apidocCodeKeywordSpan">checkForUpdates</span>(0.9, function(err) {
+    assert.notEqual(err, undefined);
+    done();
+  });
+});
+
+it('should return no error when no new version is available', function(done) {
+  // The hardcoded version should match the current version returned
+...</pre></li>
     </ul>
 
 
